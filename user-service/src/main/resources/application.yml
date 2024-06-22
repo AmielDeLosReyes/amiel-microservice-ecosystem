@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: dev  # Optional: Set active profile
+
+server:
+  port: 8081  # Specify server port
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081
