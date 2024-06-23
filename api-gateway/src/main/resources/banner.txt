@@ -4,5 +4,5 @@
 |  |   |  ||  |\   --.|  |
 `--'   `--'`--' `----'`--'
 
-Eureka Server - User Service
+Eureka Server - API Gateway
 Created by Amiel De Los Reyes © 2024

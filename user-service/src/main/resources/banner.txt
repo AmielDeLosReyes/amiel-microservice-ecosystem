@@ -4,5 +4,5 @@
 |  |   |  ||  |\   --.|  |
 `--'   `--'`--' `----'`--'
 
-Eureka Server - Service Registry
+Eureka Server - User Service
 Created by Amiel De Los Reyes © 2024

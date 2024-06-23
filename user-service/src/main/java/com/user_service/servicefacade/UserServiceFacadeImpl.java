@@ -15,7 +15,7 @@ public class UserServiceFacadeImpl implements UserServiceFacade{
     @Override
     public String callSampleService() {
         try {
-            String url = "http://sample-service/test";
+            String url = "http://sample-service/sample/test";
             return restTemplate.getForObject(url, String.class);
         } catch (Exception e) {
             // Log the exception for debugging purposes
