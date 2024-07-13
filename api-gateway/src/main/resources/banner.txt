@@ -4,5 +4,5 @@
 |  |   |  ||  |\   --.|  |
 `--'   `--'`--' `----'`--'
 
-Eureka Server - API Gateway
+Amiel Microservices - API Gateway
 Created by Amiel De Los Reyes © 2024

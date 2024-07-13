@@ -4,5 +4,5 @@
 |  |   |  ||  |\   --.|  |
 `--'   `--'`--' `----'`--'
 
-Eureka Server - Sample Service
+Amiel Microservices - Sample Service
 Created by Amiel De Los Reyes © 2024

@@ -4,5 +4,5 @@
 |  |   |  ||  |\   --.|  |
 `--'   `--'`--' `----'`--'
 
-Eureka Server - User Service
+Amiel Microservices - User Service
 Created by Amiel De Los Reyes © 2024

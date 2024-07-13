@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\config
+#        git: for remote git config server
+#          url:
+#          username:
+#          password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8888
+

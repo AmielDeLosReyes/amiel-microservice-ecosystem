@@ -1,0 +1,8 @@
+,--.   ,--.,--.       ,--.
+|   `.'   |`--' ,---. |  |
+|  |'.'|  |,--.| .-. :|  |
+|  |   |  ||  |\   --.|  |
+`--'   `--'`--' `----'`--'
+
+Amiel Microservices - Config Server
+Created by Amiel De Los Reyes © 2024
