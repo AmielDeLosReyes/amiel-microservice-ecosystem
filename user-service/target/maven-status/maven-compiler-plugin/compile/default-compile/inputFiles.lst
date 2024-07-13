@@ -1,2 +1,11 @@
-/Users/amieldelosreyes/Desktop/Amiel Microservice Ecosystem/user-service/src/main/java/com/user_service/UserServiceApplication.java
-/Users/amieldelosreyes/Desktop/Amiel Microservice Ecosystem/user-service/src/main/java/com/user_service/rest/HomeController.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\config\rest\RestTemplateConfig.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\controller\HomeController.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\controller\UserController.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\model\UsersEntity.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\repository\UsersRepository.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\request\UserLoginRequestData.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\request\UserRegisterRequestData.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\servicefacade\UserServiceFacade.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\servicefacade\UserServiceFacadeImpl.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\UserServiceApplication.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\util\HeaderParam.java
