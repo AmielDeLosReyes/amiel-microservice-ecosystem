@@ -4,5 +4,5 @@
 |  |   |  ||  |\   --.|  |
 `--'   `--'`--' `----'`--'
 
-Eureka Server - Service Registry
+Amiel Microservices - Service Registry
 Created by Amiel De Los Reyes © 2024
