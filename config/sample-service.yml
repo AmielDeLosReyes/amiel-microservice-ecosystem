@@ -9,3 +9,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+      
+opentracing:
+  jaeger:
+    enabled: true
+    udp-sender:
+      host: localhost
+      port: 6831
+
