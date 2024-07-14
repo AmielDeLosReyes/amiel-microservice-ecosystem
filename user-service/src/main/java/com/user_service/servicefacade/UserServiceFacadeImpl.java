@@ -17,12 +17,6 @@ public class UserServiceFacadeImpl implements UserServiceFacade{
     @LoadBalanced
     private RestTemplate restTemplate;
 
-//    @Autowired
-//    private UsersRepository usersRepository;
-
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
-
     @Override
     public String callSampleService() {
         try {
@@ -34,24 +28,5 @@ public class UserServiceFacadeImpl implements UserServiceFacade{
             return "Error calling sample service: " + e.getMessage();
         }
     }
-//
-//    @Override
-//    public UsersEntity registerUser(UserRegisterRequestData userRegisterRequestData) {
-//        // Check if user already exists
-//        if (usersRepository.findByUsername(userRegisterRequestData.getUsername()) != null) {
-//            throw new RuntimeException("User already exists");
-//        }
-//
-//        // Encode the password
-//        String encodedPassword = passwordEncoder.encode(userRegisterRequestData.getPassword());
-//
-//        // Create new user entity
-//        UsersEntity newUser = new UsersEntity();
-//        newUser.setUsername(userRegisterRequestData.getUsername());
-//        newUser.setPassword(encodedPassword);
-//
-//        // Save the user to the database
-//        return usersRepository.save(newUser);
-//    }
 
 }
