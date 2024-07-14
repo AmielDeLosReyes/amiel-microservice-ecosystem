@@ -7,6 +7,7 @@ C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\
 C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\repository\UsersRepository.java
 C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\request\UserLoginRequestData.java
 C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\request\UserRegisterRequestData.java
+C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\rest\response\ResponseDefault.java
 C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\servicefacade\UserServiceFacade.java
 C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\servicefacade\UserServiceFacadeImpl.java
 C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\user-service\src\main\java\com\user_service\UserServiceApplication.java

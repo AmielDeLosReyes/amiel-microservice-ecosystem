@@ -1,0 +1,8 @@
+To do:
+
+- make every request and response json. Follow user-service. TODO on other services.
+
+1. Be able to configure spring security
+2. do login and registration user REST
+3. not be able to access sample-esrvice without jwt token 
+
