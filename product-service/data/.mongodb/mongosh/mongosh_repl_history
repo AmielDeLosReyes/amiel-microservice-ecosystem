@@ -1,0 +1,10 @@
+exit
+q
+db.getUsers()
+db.createUser({ user: "root", pwd: "password", roles: [{ role: "root", db: "admin" }] })
+use admin
+db.getUsers()
+use product-service
+db.getUsers()
+use admin
+show dbs
