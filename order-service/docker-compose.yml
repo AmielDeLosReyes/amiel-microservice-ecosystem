@@ -2,12 +2,11 @@ version: '4'
 services:
   mysql:
     image: mysql:8.0
-    container_name: mysql
+    container_name: mysql-order-service
     environment:
       MYSQL_ROOT_PASSWORD: mysql
-      MYSQL_DATABASE: order-service
     ports:
-      - "3306:3306"
+      - "3308:3306"
     volumes:
-      - ./mysql:/var/lib/mysql
-      - ./docker/mysql/init.sq:/docker-entrypoint-initdb.d/init.sql
+      - /Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/order-service/mysql:/var/lib/mysql
+      - /Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/order-service/docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
