@@ -44,7 +44,7 @@ class ProductServiceApplicationTests {
 				.contentType("application/json")
 				.body(requestBody)
 				.when()
-				.post("/api/product/create-product")
+				.post("/product/create-product")
 				.then()
 				.statusCode(201)
 				.body("id", Matchers.notNullValue())

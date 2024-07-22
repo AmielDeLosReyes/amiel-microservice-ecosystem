@@ -1,13 +1,8 @@
 spring:
   application:
     name: product-service
+  config:
+    import: optional:configserver:http://localhost:8888
 
-  data:
-    data:
-      mongodb:
-        uri: mongodb://root:password@localhost:27017/?authSource=admin
-        host: localhost
-        port: 27017
-        username: root
-        password: password
-        database: product-service
+server:
+  port: 8084

@@ -34,7 +34,7 @@ class InventoryServiceApplicationTests {
 	void shouldReadInventory() {
 		var response = RestAssured.given()
 				.when()
-				.get("/api/inventory/is-in-stock?skuCode=iphone_15&quantity=1")
+				.get("/inventory/is-in-stock?skuCode=iphone_15&quantity=1")
 				.then()
 				.log().all()
 				.statusCode(200)
@@ -43,7 +43,7 @@ class InventoryServiceApplicationTests {
 
 		var negativeResponse = RestAssured.given()
 				.when()
-				.get("/api/inventory/is-in-stock?skuCode=iphone_15&quantity=1000")
+				.get("/inventory/is-in-stock?skuCode=iphone_15&quantity=1000")
 				.then()
 				.log().all()
 				.statusCode(200)

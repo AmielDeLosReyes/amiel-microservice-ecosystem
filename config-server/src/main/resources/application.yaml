@@ -7,7 +7,7 @@ spring:
     config:
       server:
         native:
-          search-locations: C:\Users\AmielD\Desktop\Amiel Microservice Ecosystem\config
+          search-locations: file:///Users/amieldelosreyes/Desktop/Amiel%20Microservices/amiel-microservice-ecosystem/config
 #        git: for remote git config server
 #          url:
 #          username:
