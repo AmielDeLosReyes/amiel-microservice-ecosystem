@@ -1,6 +1,7 @@
 /Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/user-service/src/main/java/com/user_service/UserServiceApplication.java
 /Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/user-service/src/main/java/com/user_service/config/logging/JaegerConfig.java
 /Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/user-service/src/main/java/com/user_service/config/logging/TracingAspect.java
+/Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/user-service/src/main/java/com/user_service/config/openapi/OpenAPIConfig.java
 /Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/user-service/src/main/java/com/user_service/config/rest/RestTemplateConfig.java
 /Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/user-service/src/main/java/com/user_service/rest/controller/HomeController.java
 /Users/amieldelosreyes/Desktop/Amiel Microservices/amiel-microservice-ecosystem/user-service/src/main/java/com/user_service/rest/controller/UserController.java
