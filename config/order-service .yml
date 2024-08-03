@@ -26,3 +26,49 @@ springdoc:
     path: '/api-docs'
   swagger-ui:
     path: '/swagger-ui.html'
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "circuitbreakers, health, info"
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+      show-details: always
+    circuitbreakers:
+      enabled: true
+      show-details: always
+
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      inventory:
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        minimumNumberOfCalls: 5
+  timelimiter:
+    configs:
+      inventory:
+        timeout-duration: 3s
+  retry:
+    configs:
+      inventory:
+        max-attempts: 3
+        wait-duration: 2s
+
+fallback:
+  path: /fallbackRoute
+  response:
+    status: 503
+    body: "Service Unavailable, please try again later."

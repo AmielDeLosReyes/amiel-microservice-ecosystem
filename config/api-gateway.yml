@@ -6,33 +6,64 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: 'http://localhost:8181/realms/miel-microservices-security-realm'
+    web:
+      security:
+        filter:
+          dispatcher:
+            servlet:
+              url-pattern: /actuator/**
   cloud:
     gateway:
       routes:
+        - id: fallback-route
+          uri: forward:/fallbackRoute
+          predicates:
+            - Path=/fallbackRoute
         - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/user/**
-
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCircuitBreaker
+                fallbackUri: forward:/fallbackRoute
         - id: sample-service
           uri: lb://sample-service
           predicates:
             - Path=/sample/**
-
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: sampleServiceCircuitBreaker
+                fallbackUri: forward:/fallbackRoute
         - id: order-service
           uri: lb://order-service
           predicates:
             - Path=/order/**
-
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: orderServiceCircuitBreaker
+                fallbackUri: forward:/fallbackRoute
         - id: product-service
           uri: lb://product-service
           predicates:
             - Path=/product/**
-            
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: productServiceCircuitBreaker
+                fallbackUri: forward:/fallbackRoute
         - id: inventory-service
           uri: lb://inventory-service
           predicates:
-            - Path=/inventory/**    
+            - Path=/inventory/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: inventoryServiceCircuitBreaker
+                fallbackUri: forward:/fallbackRoute
 
 server:
   port: 8080
@@ -44,21 +75,63 @@ eureka:
 
 springdoc:
   api-docs:
-    path: '/api-docs'
+    path: /api-docs
   swagger-ui:
-    path: '/swagger-ui.html'
+    path: /swagger-ui.html
     urls:
       - name: Product Service
         url: /aggregate/product-service/v3/api-docs
-
       - name: Order Service
         url: /aggregate/order-service/v3/api-docs
-
       - name: Inventory Service
         url: /aggregate/inventory-service/v3/api-docs
-
       - name: Sample Service
         url: /aggregate/sample-service/v3/api-docs
-
       - name: User Service
         url: /aggregate/user-service/v3/api-docs
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "circuitbreakers, health, info"
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+      show-details: always
+    circuitbreakers:
+      enabled: true
+      show-details: always
+
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        minimumNumberOfCalls: 5
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 3s
+  retry:
+    configs:
+      default:
+        max-attempts: 3
+        wait-duration: 2s
+
+fallback:
+  path: /fallbackRoute
+  response:
+    status: 503
+    body: "Service Unavailable, please try again later."
