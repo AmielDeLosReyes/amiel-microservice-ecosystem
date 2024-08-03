@@ -20,44 +20,22 @@ public class Routes {
                         .uri("http://localhost:8084"))
                 .route("sample-service", r -> r.path("/sample/**")
                         .uri("http://localhost:8086"))
+                // Swagger routes with RewritePath filter
+                .route("order-service-swagger", r -> r.path("/aggregate/order-service/v3/api-docs")
+                        .filters(f -> f.rewritePath("/aggregate/order-service/v3/api-docs", "/api-docs"))
+                        .uri("http://localhost:8081"))
+                .route("inventory-service-swagger", r -> r.path("/aggregate/inventory-service/v3/api-docs")
+                        .filters(f -> f.rewritePath("/aggregate/inventory-service/v3/api-docs", "/api-docs"))
+                        .uri("http://localhost:8082"))
+                .route("user-service-swagger", r -> r.path("/aggregate/user-service/v3/api-docs")
+                        .filters(f -> f.rewritePath("/aggregate/user-service/v3/api-docs", "/api-docs"))
+                        .uri("http://localhost:8083"))
+                .route("product-service-swagger", r -> r.path("/aggregate/product-service/v3/api-docs")
+                        .filters(f -> f.rewritePath("/aggregate/product-service/v3/api-docs", "/api-docs"))
+                        .uri("http://localhost:8084"))
+                .route("sample-service-swagger", r -> r.path("/aggregate/sample-service/v3/api-docs")
+                        .filters(f -> f.rewritePath("/aggregate/sample-service/v3/api-docs", "/api-docs"))
+                        .uri("http://localhost:8086"))
                 .build();
     }
-
-
-//    @Bean
-//    public RouterFunction<ServerResponse> orderServiceRoute() {
-//        return GatewayRouterFunctions.route("order_service")
-//                .route(RequestPredicates.path("/order"), HandlerFunctions.http("http://localhost:8081"))
-//                .build();
-//    }
-//
-//    @Bean
-//    public RouterFunction<ServerResponse> inventoryServiceRoute() {
-//        return GatewayRouterFunctions.route("inventory_service")
-//                .route(RequestPredicates.path("/inventory"), HandlerFunctions.http("http://localhost:8082"))
-//                .build();
-//    }
-//
-//    @Bean
-//    public RouterFunction<ServerResponse> userServiceRoute() {
-//        return GatewayRouterFunctions.route("user_service")
-//                .route(RequestPredicates.path("/user"), HandlerFunctions.http("http://localhost:8083"))
-//                .build();
-//    }
-//
-//    @Bean
-//    public RouterFunction<ServerResponse> productServiceRoute() {
-//        return GatewayRouterFunctions.route("product_service")
-//                .route(RequestPredicates.path("/product"), HandlerFunctions.http("http://localhost:8084"))
-//                .build();
-//    }
-//
-//    @Bean
-//    public RouterFunction<ServerResponse> sampleServiceRoute() {
-//        return GatewayRouterFunctions.route("sample_service")
-//                .route(RequestPredicates.path("/sample"), HandlerFunctions.http("http://localhost:8086"))
-//                .build();
-//    }
-
-
 }

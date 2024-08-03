@@ -44,6 +44,21 @@ eureka:
 
 springdoc:
   api-docs:
-    path: '/v3/api-docs'
+    path: '/api-docs'
   swagger-ui:
     path: '/swagger-ui.html'
+    urls:
+      - name: Product Service
+        url: /aggregate/product-service/v3/api-docs
+
+      - name: Order Service
+        url: /aggregate/order-service/v3/api-docs
+
+      - name: Inventory Service
+        url: /aggregate/inventory-service/v3/api-docs
+
+      - name: Sample Service
+        url: /aggregate/sample-service/v3/api-docs
+
+      - name: User Service
+        url: /aggregate/user-service/v3/api-docs

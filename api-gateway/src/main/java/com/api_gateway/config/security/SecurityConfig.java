@@ -12,12 +12,15 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 @EnableWebFluxSecurity
 public class SecurityConfig {
 
+    private static final String[] FREE_RESOURCE_URLS = {"/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/api-docs/**", "/aggregate/**"};
+
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
         http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(exchange ->
                         exchange.pathMatchers("/eureka/**").permitAll()
+                                .pathMatchers(FREE_RESOURCE_URLS).permitAll()
                                 .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 ->
