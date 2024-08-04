@@ -4,7 +4,7 @@ services:
     image: mongo:7.0.5
     container_name: mongodb
     ports:
-      - "27017:27017"
+      - "27017:27017"  # Change the host port to 27018
     environment:
       MONGO_INITDB_USERNAME: root
       MONGO_INITDB_PASSWORD: password

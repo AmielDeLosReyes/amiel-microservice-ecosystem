@@ -2,7 +2,6 @@ package com.product_service.controller;
 
 import com.product_service.controller.dto.request.ProductRequest;
 import com.product_service.controller.dto.response.ProductResponse;
-import com.product_service.model.Product;
 import com.product_service.servicefacade.ProductServiceFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
